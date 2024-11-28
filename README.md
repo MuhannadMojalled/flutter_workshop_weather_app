@@ -6,6 +6,9 @@ The Project for the third day of the flutter workshop presented by the programmi
 lottie: https://pub.dev/packages/lottie
 http: https://pub.dev/packages/http
 
+### Used API
+openweathermap: https://openweathermap.org/
+
 # Project Structure
 ```
 weather_app/
