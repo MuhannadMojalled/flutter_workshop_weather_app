@@ -127,13 +127,13 @@ class WeatherService {
       case "Clear":
         return 'assets/sunny.json';
       case "Clouds":
-        return 'assets/cloud.json';
+        return 'assets/cloudy.json';
       case "Rain":
         return 'assets/rainy.json';
       case "Thunderstorm":
-        return 'assets/thunder.json';
+        return 'assets/snow.json';
       default:
-        return 'assets/sunny.json';
+        return 'assets/windy.json';
     }
   }
 ```
