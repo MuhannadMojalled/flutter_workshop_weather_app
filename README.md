@@ -2,6 +2,10 @@
 
 The Project for the third day of the flutter workshop presented by the programming club
 
+### Used Packages
+lottie: https://pub.dev/packages/lottie
+http: https://pub.dev/packages/http
+
 # Project Structure
 ```
 weather_app/
