@@ -11,40 +11,13 @@ class WeatherPage extends StatefulWidget {
 }
 
 class _WeatherPageState extends State<WeatherPage> {
-  final weatherSerivce = WeatherService();
-  Weather? weather;
+  // variables and objects
 
-  fetchWeather({String cityName = "jeddah"}) async {
-    try {
-      final getweather = await weatherSerivce.getWeather(cityName);
-      setState(() {
-        weather = getweather;
-      });
-    } catch (e) {
-      print(e);
-    }
-  }
+  // the fetchweather function to get the weather from the weatherervice class
 
-  @override
-  void initState() {
-    super.initState();
-    fetchWeather();
-  }
+  // the initState function to call the fetchweather function
 
-  String getWeatherAnimation(String mainCond) {
-    switch (mainCond) {
-      case "Clear":
-        return 'assets/sunny.json';
-      case "Clouds":
-        return 'assets/cloud.json';
-      case "Rain":
-        return 'assets/rainy.json';
-      case "Thunderstorm":
-        return 'assets/thunder.json';
-      default:
-        return 'assets/sunny.json';
-    }
-  }
+  // the getWeatherAnimation function to get the animation based on the weather condition
 
   @override
   Widget build(BuildContext context) {
@@ -54,42 +27,11 @@ class _WeatherPageState extends State<WeatherPage> {
         child: Center(
           child: Column(
             children: [
-              Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  const SizedBox(height: 20),
-                  const Icon(
-                    Icons.location_on,
-                    color: Colors.white,
-                    size: 35,
-                  ),
-                  Text(
-                    weather?.cityName ?? "City...",
-                    style: const TextStyle(
-                      fontSize: 30,
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ],
-              ),
+              // the first Comlumn
+
               const SizedBox(height: 130),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Lottie.asset(
-                    getWeatherAnimation(weather?.mainCond ?? "clouds"),
-                  ),
-                  Text(
-                    "${weather?.temp.round().toString()}°",
-                    style: const TextStyle(
-                      fontSize: 50,
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ],
-              ),
+
+              // the second Comlumn
             ],
           ),
         ),

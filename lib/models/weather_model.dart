@@ -1,15 +1,2 @@
-class Weather {
-  final String cityName;
-  final double temp;
-  final String mainCond;
-
-  Weather({required this.cityName, required this.temp, required this.mainCond});
-
-  factory Weather.fromJson(Map<String, dynamic> json) {
-    return Weather(
-      cityName: json['name'],
-      temp: json['main']['temp'],
-      mainCond: json['weather'][0]['main'],
-    );
-  }
-}
+// in this file, you have to define the Weather class that will be used to store the weather data.
+class Weather {}
