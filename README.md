@@ -30,7 +30,7 @@ weather_app/
 └── pubspec.yaml
 ```
 ## Screenshot
-<img src="assets/screenshot.png" width="270" height="600">
+<img src="assets/screenshot.png" style="transform: scale(0.8);">
 
 # files contents
 ## main.dart
