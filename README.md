@@ -136,7 +136,7 @@ class WeatherService {
 ```
 ### The first column
 ```
-``````Column(
+  Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   const SizedBox(height: 20),
